@@ -9,12 +9,12 @@
                     </div>
                     <div class=" col-md-10">
                       <div class=" topic-content float-end">
-                        <h3><a href="topic.html"><?php echo $topic->title;?></a></h3>
+                        <h3><a href="topic.php?id=<?php echo $topic->id;?>"><?php echo $topic->title;?></a></h3>
                         <div class="topic-info">
                             
                             <a href="topics.php?category=<?php echo urlFormat($topic->category_id);?>"><?php echo $topic -> name; ?></a> >>
                             <a href="profile.php?user=<?php echo urlFormat($topic->user_id);?>"><?php echo $topic -> username; ?></a> >> <?php echo formatDate($topic -> create_date);?>
-                            <span class="span badge float-end" style="color:blue"><?php replyCount($topic->id);?></span>
+                            <button class="float-end" ><?php replyCount($topic->id);?>dddd</button>
                         </div>
                       </div>
                     </div>

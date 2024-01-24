@@ -21,11 +21,11 @@
         <div class=" d-block">
           <h3>Categories</h3>
           <div class="list-group">
-              <a href="#" class=" list-group-item active list-group-item-action">All topics: <span class="span badge float-end">14</span></a>
-            <?php if($topics): ?>
+              <a href="topics.php" class=" list-group-item active list-group-item-action <?php echo is_active(null);?>">All topics: <span class="span badge float-end">14</span></a>
+            <!-- Get topics category -->
+              <?php if($topics): ?>
               <?php foreach(getCategories() as $category) : ?>
               <a href="topics.php?category=<?php echo $category->id;?>" class=" list-group-item list-group-item-action"><?php echo $category->name;?><span class="span badge float-end">14</span></a>
-             
               <?php endforeach;?>
             <?php else : ?>
               <p> Nejsou vloženy žádné kategorie </p>

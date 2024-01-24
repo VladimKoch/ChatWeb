@@ -63,7 +63,7 @@ class Topic{
         }
 
         /**
-         * Get category by id
+         * Get category by ID
          */
         
         public function getCategory($category_id){
@@ -95,6 +95,22 @@ class Topic{
             return $results;
 
          }
+
+        /**
+         *  Get topic by ID
+         */
         
+        public function getTopic($id){
+            $this -> db -> query("SELECT topics.*,users.username,users.name,users.avatar FROM topics
+            INNER JOIN users
+            ON topics.user_id = users.id
+            WHERE topics.id = :id");
+            
+            $this -> db ->bind(':id',$id);
+
+            //Assign Row
+            $row = $this -> db -> single();
+            return $row;
+        }
     }
 ?>

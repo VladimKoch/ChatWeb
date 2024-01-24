@@ -11,7 +11,7 @@
                     </div>
                     <div class=" col-md-10">
                       <div class=" topic-content float-end">
-                        <h3><a href="topic.html"><?php echo $topic->title;?></a></h3>
+                        <h3><a href="topic.php?id=<?php echo urlFormat($topic -> id);?>"><?php echo $topic->title;?></a></h3>
                         <div class="topic-info">
                             
                             <a href="topics.php?category=<?php echo urlFormat($topic->category_id);?>"><?php echo $topic -> name; ?></a> >>
@@ -32,7 +32,7 @@
                 <ul>
                   <li>Celkový počet uživatelů: <strong></strong></li>
                   <li>Celkový počet Topiků: <strong><?php echo $totalTopics;?></strong></li>
-                  <li>Celkový počet Kategorií: <strong><?php echo $totalByCategory;?></strong></li>
+                  <li>Celkový počet Kategorií: <strong><?php echo $totalCategories;?></strong></li>
                 </ul>
 
 

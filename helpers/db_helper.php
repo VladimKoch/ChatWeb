@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Get # of replies pertopic
+ * Get # of replies per topic
  */
 
 function replyCount($topic_id){
