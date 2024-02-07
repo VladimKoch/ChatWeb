@@ -5,7 +5,7 @@
 
 <?php 
 // Create Topic Object
-$topic = new Topic;
+$topic = new TopicModel();
 
 //Get Template & Assign Variables
 $template = new Template('sablony/frontpage.php');
@@ -16,7 +16,7 @@ $db -> createTable();
 $db -> closeConnection();
 
 //Assign Vars
-$template->topics = $topic -> getAllTopics();
+$template -> topics = $topic -> getAllTopics();
 $template -> totalTopics = $topic -> getTotalTopics();
 $template -> totalCategories = $topic -> getTotalCategories();
 

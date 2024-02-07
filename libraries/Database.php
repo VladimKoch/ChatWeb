@@ -83,7 +83,7 @@ $db_topics = "CREATE TABLE IF NOT EXISTS topics(
                             id INT (11) NOT NULL AUTO_INCREMENT,
                             topic_id INT (11) NOT NULL,
                             user_id INT (11) NOT NULL,
-                            body INT (11) NOT NULL,
+                            body TEXT NOT NULL,
                             create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                             PRIMARY KEY(id))";                            
 

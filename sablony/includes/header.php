@@ -1,5 +1,7 @@
 <html lang="cs" data-bs-theme="auto">
-  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+  <head>
+    
+  <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -187,3 +189,4 @@
             <h4 class=" float-end">PHP fórum jednoduše!</h4>
             <div class=" clearfix"></div> 
             <hr>
+            <?php displayMessage();?>

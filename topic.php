@@ -1,13 +1,19 @@
-<?php require('core/init.php');?>
+<?php require_once('core/init.php');?>
 
 
 <?php 
 
+//new class
+$topic = new TopicModel();
 
-//Create New Topic
-$topic = new Topic;
+//Get ID From URL
 
-$topic_id = $_GET['id'];
+    $topic_Id = $_GET['id'];
+
+
+//Get ID from URL by categories
+
+// $topic_Id = isset($_GET['category']);
 
 //Get Template & Assign Variables
 $template = new Template('sablony/topic.php');
@@ -15,10 +21,10 @@ $template = new Template('sablony/topic.php');
 
 
 //Assign Vars
+$template ->  topic = $topic -> getTopic($topic_Id);
+$template -> replies = $topic -> getReplies($topic_Id);
+$template -> title = $topic -> getTopic($topic_Id) -> title;
 
-$template -> topic = $topic->getTopic($topic_id);
-// $template -> replies = $topic -> getReplies($topic_id);
-$template -> title = $topic -> getTopic($topic_id) -> title;
 
 //Display Template
 

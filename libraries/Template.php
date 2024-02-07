@@ -48,7 +48,7 @@ public function __toString()
     chdir(dirname($this->template));
     ob_start();
 
-    include basename($this->template);
+    require basename($this->template);
     return ob_get_clean();
 }
 

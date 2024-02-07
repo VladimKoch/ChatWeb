@@ -17,7 +17,7 @@ require_once('helpers/system_helper.php');
 //Autoloader Classes
 
 function myAutoloader($class_name) {
-    include('libraries/'.$class_name . '.php');
+    require_once('libraries/'.$class_name . '.php');
 }
 spl_autoload_register('myAutoloader');
 

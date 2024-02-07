@@ -26,7 +26,7 @@ function urlFormat($str){
 }
 
 /**
- *  Add class namea ctive if category is active 
+ *  Add class name active if category is active 
  */
 function is_active($category){
     if(isset($_GET['category'])){
